@@ -1,0 +1,269 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  height: 100%;
+}
+
+#logo {
+  float: left;
+}
+
+header {
+  background-color: #463a3c;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+}
+
+footer {
+  background-color: #463a3c;
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-text {
+  float: right;
+  color: white;
+}
+
+#controls,
+#editbtn,
+#codebtn,
+#downloadbtn {
+  float: right;
+}
+
+.workspace {
+  height: 90.5%;
+  width: 78%;
+  position: fixed;
+  top: 40px;
+  left: 300px;
+  border: 1px dashed blue;
+}
+
+.accordion {
+  width: 300px;
+  max-height: 600px;
+  background: #fff;
+  overflow-y: auto;
+  margin-top: -6px;
+}
+
+/** grid-layout **/
+
+.grid {
+  display: list-item;
+  padding: 0px;
+  height: 250px;
+  list-style: none;
+}
+
+.grid_item {
+  background: #463a3c;
+  border: 1px solid #2f2728;
+  display: block;
+  float: left;
+  width: 95px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.tile {
+  margin: 0px 9px;
+}
+
+#layout2_map .layout-container {
+  width: 490px;
+  height: 250px;
+  float: left;
+  margin: 20px;
+  border: 1px solid #d7d6d6;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  height: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+
+/* added by velumurugan */
+.gjs-editor-cont {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.gjs-cv-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+}
+
+/* .gjs-pn-buttons {
+  display: none !important;
+} */
+
+.gjs-pn-panel {
+  position: relative !important;
+  padding: 0px !important;
+}
+
+#codebtn img{
+  height: 36px;
+  margin-top: 2px;
+}
+.gjs-pn-buttons {
+  height: 18px;
+  position: absolute;
+  top: 29px;
+}
+.gjs-pn-btn {
+  box-sizing: border-box;
+   min-height: 0px !important; 
+  min-width: 39px;
+  border-radius: 2px !important;
+  padding: 9px;
+  position: relative;
+  cursor: pointer;
+  left: 10px;
+top: -20px;
+}
+
+i.awsimgsize{
+  font-size:48px;
+  color:white
+}
+
+.awslblsize{
+  font-size:12px;
+  color:white
+}

@@ -1,0 +1,19 @@
+{
+  "layouts": [{
+      "name": "1 x 1",
+      "imageUrl": "images/mashup-builder_07.gif"
+    },
+    {
+      "name": "2 x 2",
+      "imageUrl": "images/mashup-builder_09.gif"
+    },
+    {
+      "name": "2 Columns",
+      "imageUrl": "images/mashup-builder_13.gif"
+    },
+    {
+      "name": "3 Columns",
+      "imageUrl": "images/mashup-builder_14.gif"
+    }
+  ]
+}
