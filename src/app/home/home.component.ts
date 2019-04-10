@@ -47,15 +47,14 @@ export class HomeComponent implements OnInit {
       plugins: [basicBlocksPlugin, exportPlugin],
       pluginsOpts: {
         [basicBlocksPlugin]: {
-          blocks: ['column1', 'column2', 'column3','column4'],
+          blocks: ['column1', 'column2', 'column3'],
           flexGrid: 0,
           stylePrefix: 'gjs-',
           addBasicStyle: true,
           category: 'Basic',
           labelColumn1: '1 Column',
           labelColumn2: '2 Columns',
-          labelColumn3: '3 Columns',
-          labelColumn4: '4 Columns'
+          labelColumn3: '3 Columns'
         },
         [exportPlugin]: {
           addExportBtn: true,
@@ -86,19 +85,53 @@ export class HomeComponent implements OnInit {
       }
     });
 
-    editor.runCommand('sw-visibility')
+    editor.runCommand('sw-visibility');
 
     let blockManager = editor.BlockManager;
     let chartManager = editor.BlockManager;
 
+    editor.on('block:drag:stop', (model) => {
+      if(model){
+      let comp=model.closest('div.gjs-cell');
+      if(comp != 0){
+      //console.log(comp);
+      comp.setStyle({width: '1%'});
+      model.setStyle({padding:'10px'});
+      }
+      }
+      // model.get('components').each(model => self.updateAll(model));
+      }); 
+
     chartManager.add('multiColumnGrid', {
+      category: 'Basic',
+      label: '<svg xmlns="http://www.w3.org/2000/svg" width="55" height="70" viewBox="0 0 18 18"><path d="M3 2v13h13V2H4zm7 12H4v-5h5v5zm0-6H4V3h5v5zm5 6h-5v-5h5v5zm0-6h-5V3h5"/></svg></br><div class="gjs-block-label">2 X 2</div>',
+      content: `<div class="column" data-gjs-custom-name="column"><div class="row" data-gjs-droppable=".row-cell" data-gjs-custom-name="Row"><div class="row-cell" data-gjs-draggable=".row"></div><div class="row-cell" data-gjs-draggable=".row"></div></div><div class="row" data-gjs-droppable=".row-cell" data-gjs-custom-name="Row"><div class="row-cell" data-gjs-draggable=".row"></div><div class="row-cell" data-gjs-draggable=".row"></div></div></div>
+      <style>
+        .row {
+          display: flex;
+          justify-content: flex-start;
+          align-items: stretch;
+          flex-wrap: nowrap;
+          padding: 10px;
+          min-height: 75px;
+        }
+        .row-cell {
+          flex-grow: 1;
+          flex-basis: 100%;
+          padding: 5px;
+        }
+      </style>
+    `,
+    });
+
+    /*chartManager.add('multiColumnGrid', {
       category: 'Basic',
       label: '<svg xmlns="http://www.w3.org/2000/svg" width="55" height="70" viewBox="0 0 18 18"><path d="M3 2v13h13V2H4zm7 12H4v-5h5v5zm0-6H4V3h5v5zm5 6h-5v-5h5v5zm0-6h-5V3h5"/></svg></br><div class="gjs-block-label">2 X 2</div>',
       content: {
         attributes: { 'id': 'multiColumn' },
         content:'<div class="gjs-row"><div data-gjs-type="default" data-highlightable="1" class="gjs-cell"></div><div data-gjs-type="default" data-highlightable="1" class="gjs-cell"></div></div><div class="gjs-row"><div data-gjs-type="default" data-highlightable="1" class="gjs-cell"></div><div data-gjs-type="default" data-highlightable="1" class="gjs-cell"></div></div>'
       }
-      /*toAdd('column2') && bm.add('column2', {
+      toAdd('column2') && bm.add('column2', {
         label: c.labelColumn2,
         attributes: {class:'gjs-fonts gjs-f-b2'},
         category: c.category,
@@ -112,8 +145,8 @@ export class HomeComponent implements OnInit {
               ${styleClm}
             </style>`
             : ''}`
-      });*/
-    });
+      });
+    });*/
 
     // 'my-first-block' is the ID of the block
     blockManager.add('grid', {
