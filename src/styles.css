@@ -11,6 +11,14 @@ body {
   float: left;
 }
 
+#Mashuplbl{
+  padding-top: 10px;
+  float: left;
+}
+#textlbl{
+  font-size: initial;
+}
+
 header {
   background-color: #463a3c;
   width: 100%;

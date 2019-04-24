@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
           addBasicStyle: true,
           category: 'Basic',
           labelColumn1: '1 Column',
-          labelColumn3: '3 Columns'
+          labelColumn3: '3 x 1'
         },
         [exportPlugin]: {
           addExportBtn: true,
@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit {
       chartManager.add('2ColumnGrid', {
         category: 'Basic',
         attributes: {class:'gjs-fonts gjs-f-b2'},
-        label: '2 Columns',
+        label: '2 X 1',
         content: `<div class="column" data-gjs-custom-name="column"><div class="row" data-gjs-droppable=".row-cell" data-gjs-custom-name="Row"><div class="row-cell" data-gjs-draggable=".row"></div><div class="row-cell" data-gjs-draggable=".row"></div></div>
         <style>
           .row {
