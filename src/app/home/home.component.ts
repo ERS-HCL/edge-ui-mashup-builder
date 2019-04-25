@@ -47,13 +47,12 @@ export class HomeComponent implements OnInit {
       plugins: [basicBlocksPlugin, exportPlugin],
       pluginsOpts: {
         [basicBlocksPlugin]: {
-          blocks: ['column1', 'column3'],
+          blocks: ['column1'],
           flexGrid: 0,
           stylePrefix: 'gjs-',
           addBasicStyle: true,
           category: 'Basic',
-          labelColumn1: '1 Column',
-          labelColumn3: '3 x 1'
+          labelColumn1: '1 Column'
         },
         [exportPlugin]: {
           addExportBtn: true,
@@ -91,15 +90,35 @@ export class HomeComponent implements OnInit {
 
     editor.on('block:drag:stop', (model) => {
       if(model){
-      let comp=model.closest('div.gjs-cell');
-      if(comp != 0){
-      //console.log(comp);
-      comp.setStyle({width: '1%'});
-      model.setStyle({padding:'10px'});
+      let comp=model.closest('div.row-cell') ? model.closest('div.row-cell') : model.closest('div.gjs-cell');
+        if(comp != 0){
+        comp.setStyle({width: '8%'});
+        model.setStyle({padding:'10px'});
+        }
       }
+    }); 
+      
+      editor.Commands.add("tlb-delete", {
+      run(ed) {
+        let sel = ed.getSelected();
+        if (!sel || !sel.get("removable")) {
+          return;
+        }
+        ed.select(null);
+        ed.trigger("component:preremove", sel);
+        sel.destroy();
       }
-      // model.get('components').each(model => self.updateAll(model));
-      }); 
+    });
+      
+      editor.on("component:preremove", model => {
+      if(model){
+        let comp=model.closest('div.row-cell');
+        if(comp != 0){
+          comp.setStyle({width: '8%'});
+        }
+      }
+    }); 
+
       chartManager.add('2ColumnGrid', {
         category: 'Basic',
         attributes: {class:'gjs-fonts gjs-f-b2'},
@@ -121,7 +140,29 @@ export class HomeComponent implements OnInit {
           }
         </style>
       `,
-      });  
+      });
+      chartManager.add('3ColumnGrid', {
+        category: 'Basic',
+        attributes: {class:'gjs-fonts gjs-f-b3'},
+        label: '3 x 1',
+        content: `<div class="column" data-gjs-custom-name="column"><div class="row" data-gjs-droppable=".row-cell" data-gjs-custom-name="Row"><div class="row-cell" data-gjs-draggable=".row"></div><div class="row-cell" data-gjs-draggable=".row"></div><div class="row-cell" data-gjs-draggable=".row"></div></div>
+        <style>
+        .row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        padding: 10px;
+        min-height: 75px;
+        }
+        .row-cell {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 5px;
+        }
+        </style>
+        `,
+        });  
     chartManager.add('multiColumnGrid', {
       category: 'Basic',
       label: '<svg xmlns="http://www.w3.org/2000/svg" width="55" height="70" viewBox="0 0 18 18"><path d="M3 2v13h13V2H4zm7 12H4v-5h5v5zm0-6H4V3h5v5zm5 6h-5v-5h5v5zm0-6h-5V3h5"/></svg></br><div class="gjs-block-label">2 X 2</div>',
