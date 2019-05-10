@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
               this.listenTo(this.target, 'component:toggled', this.toggleTm);
               this.toggleTm();
             },
-            toggleTm: function toggleTm() {
+            toggleTm: function () {
               var sender = this.sender;
               if (sender && sender.get && !sender.get('active')) return;
               let traitBlock=document.getElementById('traits');
@@ -172,19 +172,19 @@ export class HomeComponent implements OnInit {
             editable:true,
             traits: [
               {
-                type:'text',
+                type:'heading',
                 name:'heading',
                 label:'Title',
                 changeProp: 1
               },
               {
-                type:'text',
+                type:'subtitle',
                 name:'subtitle',
                 label:'Subtitle',
                 changeProp: 1
               },
               {
-                type:'text',
+                type:'api',
                 name:'api',
                 label:'API',
                 changeProp: 1
@@ -202,7 +202,38 @@ export class HomeComponent implements OnInit {
         view: dType
     });
 
+    editor.TraitManager.addType('heading', {
+      getInputEl: function () {
+        if (!this.inputEl) {
+          var input = document.createElement('input');
+          input.value = this.target.get('attributes').heading;
+          this.inputEl = input;
+        }
+        return this.inputEl;
+      },
+    });
 
+    editor.TraitManager.addType('subtitle', {
+      getInputEl: function () {
+        if (!this.inputEl) {
+          var input = document.createElement('input');
+          input.value = this.target.get('attributes').subtitle;
+          this.inputEl = input;
+        }
+        return this.inputEl;
+      },
+    });
+
+    editor.TraitManager.addType('api', {
+      getInputEl: function () {
+        if (!this.inputEl) {
+          var input = document.createElement('input');
+          input.value = this.target.get('attributes').api;
+          this.inputEl = input;
+        }
+        return this.inputEl;
+      },
+    });
 
     editor.on('block:drag:stop', (model) => {
       if(model){
@@ -336,9 +367,9 @@ export class HomeComponent implements OnInit {
       //   script.src = 'https://hclo365-my.sharepoint.com/personal/velmurugan_su_hcl_com/Documents/main.js?e=4%3a680718ec2de5496ca6ac9df8bccf13ae&at=9';
       //   document.body.appendChild(script);
       // },
-        attributes: { 'id': 'gridTable', type:'grid' },
-        content: '<core-grid-datatypes apirequest={"handlerURL":"https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db"} tableconfig=\'{"id":"materialsummary","theme":"blue","title":{"text":"Paren grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}\'></core-grid-datatypes>',
-        type:'chart'
+        attributes: { 'id': 'gridTable', type:'grid','heading':'Parent grid title','subtitle':"Parent grid subtitle",'api':'https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db' },
+        content: '<core-grid-datatypes apirequest={"handlerURL":"https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db"} tableconfig=\'{"id":"materialsummary","theme":"blue","title":{"text":"Parent grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}\'></core-grid-datatypes>',
+        type:'chart',
       }
     });
 
@@ -347,7 +378,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-bar-chart awsimgsize"></i></br><lable class="awslblsize">Bar Chart</label>',
       content: {
-        attributes: { 'id': 'barCharts','type':'bar', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://raw.githubusercontent.com/Ayshvarya/chartDemo/master/chartData.json' },
+        attributes: { 'id': 'barCharts','type':'bar', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1' },
          content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.bar)+'\''+ 'charttype="bar"></core-chart-datatypes>',
         type:'chart'
       }
@@ -357,7 +388,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-columns awsimgsize"></i></br><lable class="awslblsize">Column Chart</label>',
       content: {
-        attributes: { 'id': 'columnCharts','type':'column' },
+        attributes: { 'id': 'columnCharts','type':'column', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1'  },
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.column)+'\''+ 'charttype="column"></core-chart-datatypes>',
         type:'chart'
       }
@@ -367,7 +398,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-pie-chart awsimgsize"></i></br><lable class="awslblsize">Pie Chart</label>',
       content: {
-        attributes: { 'id': 'pieCharts','type':'pie' },
+        attributes: { 'id': 'pieCharts','type':'pie', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/posts/1'  },
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/posts/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.pie)+'\''+ 'charttype="pie"></core-chart-datatypes>',
         type:'chart'
       }
@@ -377,7 +408,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M11 5.08V2c-5 .5-9 4.81-9 10s4 9.5 9 10v-3.08c-3-.48-6-3.4-6-6.92s3-6.44 6-6.92zM18.97 11H22c-.47-5-4-8.53-9-9v3.08C16 5.51 18.54 8 18.97 11zM13 18.92V22c5-.47 8.53-4 9-9h-3.03c-.43 3-2.97 5.49-5.97 5.92z"/></svg></br><lable class="awslblsize">Donut Chart</label>',
       content: {
-        attributes: { 'id': 'donutCharts','type':'donut' },
+        attributes: { 'id': 'donutCharts','type':'donut', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/posts/1'  },
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/posts/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.donut)+'\''+ 'charttype="donut"></core-chart-datatypes>',
         type:'chart'
       }
@@ -387,7 +418,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-line-chart awsimgsize"></i></br><lable class="awslblsize">Line Chart</label>',
       content: {
-        attributes: { 'id': 'lineCharts' ,'type':'line'},
+        attributes: { 'id': 'lineCharts' ,'type':'line', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1' },
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.line)+'\''+ 'charttype="line"></core-chart-datatypes>',
         type:'chart'
       }
@@ -397,7 +428,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-area-chart awsimgsize"></i></br><lable class="awslblsize">Area Chart</label>',
       content: {
-        attributes: { 'id': 'areaCharts' ,'type':'area'},
+        attributes: { 'id': 'areaCharts' ,'type':'area', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1' },
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.area)+'\''+ 'charttype="area"></core-chart-datatypes>',
         type:'chart'
       }
