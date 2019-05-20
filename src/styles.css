@@ -50,11 +50,16 @@ footer {
 
 .workspace {
   height: 90.5%;
-  width: 78%;
+  width: 100%;
   position: fixed;
   top: 40px;
-  left: 300px;
   border: 1px dashed blue;
+}
+
+.gjs-pn-views-container{
+  width:300px;
+  max-height:600px;
+  height:600px;
 }
 
 .accordion {
@@ -262,8 +267,8 @@ footer {
   padding: 9px;
   position: relative;
   cursor: pointer;
-  left: 10px;
-top: -20px;
+  left: -130px;
+top: -18px;
 }
 
 i.awsimgsize{
