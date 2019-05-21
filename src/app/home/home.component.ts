@@ -26,13 +26,13 @@ export class HomeComponent implements OnInit {
   public chartconfig: {[k:string]:any}={
     bar:{"showTotal":false,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{ "series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true,"stacking":"normal"}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
     column:{"showTotal":true,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true,"stacking":"normal"}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
-    pie:{"showTotal":false,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%","type":"variablepie"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"format": '<b>{point.name}</b>: {point.percentage:.1f} %',"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
+    pie:{"showTotal":false,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"type":"pie","events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"format": '<b>{point.name}</b>: {point.percentage:.1f} %',"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
     donut:{"showTotal":false,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"format": '<b>{point.name}</b>: {point.percentage:.1f} %',"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true,"startAngle":0,"endAngle":360}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
     line:{"showTotal":true,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
-    area:{"showTotal":true,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
+    area:{"showTotal":true,"tooltipFormat":"NameAndValue","responsive":true,"uniqueId":"uniqueId","colors":["#DB8F25","#d4534c","#7ec6bb","#999","#5cdff4","#ffa519","#c42525","#19a7a7","#a6c96a"],"exporting":{"enabled":false},"chart":{"events":{"clickEventEnabled":false,"clickEventName":"chartClickEvent","clickEventUniqueId":"chart_1"},"height":"50%"},"title":{"text":"Parent App chart title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial, Helvetica, sans-serif"}},"subtitle":{"text":"Parent App chart subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"legend":{"align":"right","backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"verticalAlign":"middle","itemMarginTop":2,"itemMarginBottom":2,"itemStyle":{"color":"#666666","fontSize":"12px","fontWeight":"normal","fontFamily":"Arial, Helvetica, sans-serif"},"data":{"enabled":false}},"tooltip":{"backgroundColor":"#FFFFFF","borderColor":"#CCCCCC","borderRadius":5,"borderWidth":1,"enabled":true,"followPointer":false,"style":{"color":"contrast","fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"plotOptions":{"series":{"pointPadding":0.4,"clickEventEnabled":false,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","dataLabels":{"enabled":false,"borderRadius":1,"style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"borderWidth":1,"borderColor":"#FFFFFF","showInLegend":true,"stacking":"percent"}},"xAxis":{"gridLineWidth":1,"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"xAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}},"scrollbar":{"enabled":true}},"yAxis":{"gridLineWidth":1,"stackLabels":{"enabled":false},"labels":{"enabled":true,"events":{"clickEventEnabled":false,"clickEventName":"yAxisLabelClickEvent","clickEventUniqueId":"chart_1"},"align":"center","style":{"fontSize":"11px","fontFamily":"Arial, Helvetica, sans-serif"}},"title":{"enabled":true,"align":"middle","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}},"targetBox":{"clickEventEnabled":true,"clickEventName":"seriesClickEvent","clickEventUniqueId":"chart_1","text":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"black"}},"aboveTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}},"belowTarget":{"style":{"font-size":"14px","font-family":"Arial, Helvetica, sans-serif","color":"#d3650a"}}}},
     grid:{"id":"materialsummary","theme":"blue","title":{"text":"Parent grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}
   };
-  public components=['chart','pie','donut'];
+  public components=['chart','pie','donut','grid'];
 
   constructor() {
    
@@ -164,6 +164,12 @@ export class HomeComponent implements OnInit {
     editor.TraitManager.addType('donutType', {
       getInputEl: function () {
         return self.setSelectValue(this,'donutType',['Basic','Semi Circle']);
+      }
+    });
+
+    editor.TraitManager.addType('theme', {
+      getInputEl: function () {
+        return self.setSelectValue(this,'theme',['blue','dark']);
       }
     });
 
@@ -304,7 +310,7 @@ export class HomeComponent implements OnInit {
       //   script.src = 'https://hclo365-my.sharepoint.com/personal/velmurugan_su_hcl_com/Documents/main.js?e=4%3a680718ec2de5496ca6ac9df8bccf13ae&at=9';
       //   document.body.appendChild(script);
       // },
-        attributes: { 'id': 'gridTable', type:'grid','heading':'Parent grid title','subtitle':"Parent grid subtitle",'api':'https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db' },
+        attributes: { 'id': 'gridTable', type:'grid','heading':'Parent grid title','subtitle':"Parent grid subtitle",'api':'https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db','fontFamily':'Arial, Helvetica, sans-serif','theme':'blue' },
         content: '<core-grid-datatypes apirequest={"handlerURL":"https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db"} tableconfig=\'{"id":"materialsummary","theme":"blue","title":{"text":"Parent grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}\'></core-grid-datatypes>',
         type:'grid',
       }
@@ -355,7 +361,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-line-chart awsimgsize"></i></br><lable class="awslblsize">Line Chart</label>',
       content: {
-        attributes: { 'id': 'lineCharts' ,'type':'line', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1','legendAlign':'right','tooltipEnabled':true ,'tooltipFormat':'NameAndValue','fontFamily':'Arial, Helvetica, sans-serif','enableData':false },
+        attributes: { 'id': 'lineCharts' ,'type':'line', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1','legendAlign':'right','tooltipEnabled':true ,'tooltipFormat':'NameAndValue','fontFamily':'Arial, Helvetica, sans-serif','enableData':false ,'barChartType':'Stacked'},
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.line)+'\''+ 'charttype="line"></core-chart-datatypes>',
         type:'chart'
       }
@@ -365,7 +371,7 @@ export class HomeComponent implements OnInit {
       category: 'Components',
       label: '<i class="fa fa-area-chart awsimgsize"></i></br><lable class="awslblsize">Area Chart</label>',
       content: {
-        attributes: { 'id': 'areaCharts' ,'type':'area', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1','legendAlign':'right','tooltipEnabled':true ,'tooltipFormat':'NameAndValue','fontFamily':'Arial, Helvetica, sans-serif','enableData':false },
+        attributes: { 'id': 'areaCharts' ,'type':'area', 'heading':'Parent App Chart Title','subtitle':"Parent app Chart subtitle",'api':'https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1','legendAlign':'right','tooltipEnabled':true ,'tooltipFormat':'NameAndValue','fontFamily':'Arial, Helvetica, sans-serif','enableData':false ,'barChartType':'Stacked'},
         content:'<core-chart-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/Ayshvarya/chartDemo/chart/1"}\' chartconfig=\''+JSON.stringify(this.chartconfig.area)+'\''+ 'charttype="area"></core-chart-datatypes>',
         type:'chart'
       }
@@ -468,29 +474,37 @@ export class HomeComponent implements OnInit {
       domComps.addType(component, {
         model: dModel.extend({
           init() {
+            
             this.listenTo(this, 'change:heading', this.changeTitle);
             this.listenTo(this, 'change:subtitle', this.changeTitle);
             this.listenTo(this, 'change:api', this.changeTitle);
+            this.listenTo(this, 'change:fontFamily', this.changeTitle);
             this.listenTo(this, 'change:legendAlign', this.changeTitle);
             this.listenTo(this, 'change:tooltipEnabled', this.changeTitle);
             this.listenTo(this, 'change:tooltipFormat', this.changeTitle);
-            this.listenTo(this, 'change:fontFamily', this.changeTitle);
             this.listenTo(this, 'change:barchartType', this.changeTitle);
             this.listenTo(this, 'change:donutType', this.changeTitle);
-         //   this.listenTo(this, 'change:enableStack', this.changeTitle);
-            this.listenTo(this, 'change:showTotal', this.changeTitle);
+        //   this.listenTo(this, 'change:enableStack', this.changeTitle);
+            this.listenTo(this, 'change:showTotal', this.changeTitle);  
             this.listenTo(this, 'change:enableData', this.changeTitle);
+            this.listenTo(this, 'change:theme', this.changeTitle);
 
           },
           changeTitle() {
               self.chartconfig[this.attributes.attributes.type].title.text=this.get('heading') ? this.get('heading') : 'Parent App chart title';;
               self.chartconfig[this.attributes.attributes.type].subtitle.text=this.get('subtitle') ? this.get('subtitle') : 'Parent App chart subtitle';
-              self.chartconfig[this.attributes.attributes.type].legend.align=this.get('legendAlign') ? this.get('legendAlign') : 'right';
-              self.chartconfig[this.attributes.attributes.type].tooltip.enabled=this.get('tooltipEnabled') ? (this.get('tooltipEnabled') == true ? false : true) : true;
-              self.chartconfig[this.attributes.attributes.type].tooltipFormat=this.get('tooltipFormat') ? this.get('tooltipFormat') : 'NameAndValue';
               self.chartconfig[this.attributes.attributes.type].title.style.fontFamily=this.get('fontFamily') ? this.get('fontFamily') : 'Arial, Helvetica, sans-serif';
               self.chartconfig[this.attributes.attributes.type].subtitle.style.fontFamily=this.get('fontFamily') ? this.get('fontFamily') : 'Arial, Helvetica, sans-serif';
-              self.chartconfig[this.attributes.attributes.type].plotOptions.series.dataLabels.enabled=this.get('enableData') ? this.get('enableData') : false;
+
+              if(component != 'grid'){
+                self.chartconfig[this.attributes.attributes.type].legend.align=this.get('legendAlign') ? this.get('legendAlign') : 'right';
+                self.chartconfig[this.attributes.attributes.type].tooltip.enabled=this.get('tooltipEnabled') ? (this.get('tooltipEnabled') == true ? false : true) : true;
+                self.chartconfig[this.attributes.attributes.type].tooltipFormat=this.get('tooltipFormat') ? this.get('tooltipFormat') : 'NameAndValue';
+                self.chartconfig[this.attributes.attributes.type].plotOptions.series.dataLabels.enabled=this.get('enableData') ? this.get('enableData') : false;
+              }
+              if(component == 'grid'){
+                self.chartconfig[this.attributes.attributes.type].theme=this.get('theme') ? this.get('theme') : 'blue';
+              }
 
               if(component == 'chart'){
                 let obj=JSON.parse(JSON.stringify(self.chartconfig.bar.plotOptions.series));
@@ -538,13 +552,19 @@ export class HomeComponent implements OnInit {
               this.view.$el[0].appendChild(cusElem);
               this.attributes.attributes.heading=this.get('heading') ? this.get('heading') : 'Parent App chart title';;
               this.attributes.attributes.subtitle=this.get('subtitle') ? this.get('subtitle') : 'Parent App chart subtitle';
-              this.attributes.attributes.legendAlign=this.get('legendAlign') ? this.get('legendAlign') : 'right';
-              this.attributes.attributes.tooltipEnabled=this.get('tooltipEnabled') ? (this.get('tooltipEnabled') == true ? false : true) : true;
-              this.attributes.attributes.tooltipFormat=this.get('tooltipFormat') ? this.get('tooltipFormat') : 'NameAndValue';
               this.attributes.attributes.fontFamily=this.get('fontFamily') ? this.get('fontFamily') : 'Arial, Helvetica, sans-serif';
-              this.attributes.attributes.enableData=this.get('enableData') ? this.get('enableData') : false;
+              if(component != 'grid'){
+                this.attributes.attributes.legendAlign=this.get('legendAlign') ? this.get('legendAlign') : 'right';
+                this.attributes.attributes.tooltipEnabled=this.get('tooltipEnabled') ? (this.get('tooltipEnabled') == true ? false : true) : true;
+                this.attributes.attributes.tooltipFormat=this.get('tooltipFormat') ? this.get('tooltipFormat') : 'NameAndValue';
+                this.attributes.attributes.enableData=this.get('enableData') ? this.get('enableData') : false;
+              }
+           
               if(component == 'chart'){
                 this.attributes.attributes.barChartType=this.get('barchartType') ? this.get('barchartType') :'Stacked';
+              }
+              if(component == 'grid'){
+                this.attributes.attributes.theme=this.get('theme') ? this.get('theme') : 'blue';
               }
               if(component == 'pie' || component == 'donut'){
                 this.attributes.attributes.showTotal=this.get('showTotal') ? this.get('showTotal') : false;
@@ -596,33 +616,36 @@ export class HomeComponent implements OnInit {
           name:'api',
           label:'API',
           changeProp: 1
-        },
-        {
-          type: 'legendAlign',
-          label: 'Legend alignment',
-          name: 'legendAlign',
-          changeProp:1,
-        },
-        {
-          type: 'tooltipFormat',
-          label: 'TooltipFormat',
-          name: 'tooltipFormat',
-          changeProp:1
-        },
-        {
-            type: 'checkbox',
-            label: 'Disable Tooltip',
-            name: 'tooltipEnabled',
-            changeProp:1
-        },
-        {
-          type: 'checkbox',
-          label: 'Enable Data label',
-          name: 'enableData',
-          changeProp:1
         }
-        
        ];
+       if(component != 'grid'){
+          arr.push.apply(arr,[
+            {
+              type: 'legendAlign',
+              label: 'Legend alignment',
+              name: 'legendAlign',
+              changeProp:1,
+            },
+            {
+              type: 'tooltipFormat',
+              label: 'TooltipFormat',
+              name: 'tooltipFormat',
+              changeProp:1
+            },
+            {
+                type: 'checkbox',
+                label: 'Disable Tooltip',
+                name: 'tooltipEnabled',
+                changeProp:1
+            },
+            {
+              type: 'checkbox',
+              label: 'Enable Data label',
+              name: 'enableData',
+              changeProp:1
+            }
+          ]);
+       }
        if(component == 'chart'){
         //  arr.push({
         //   type: 'checkbox',
@@ -654,6 +677,14 @@ export class HomeComponent implements OnInit {
           type:'donutType',
           label:'Chart type',
           name:'donutType',
+          changeProp:1
+        });
+      }
+      if(component == 'grid'){
+        arr.push({
+          type: 'theme',
+          label: 'Theme',
+          name: 'theme',
           changeProp:1
         });
       }
