@@ -79,19 +79,41 @@ export class HomeComponent implements OnInit {
           btnLabel: 'Export to ZIP',
           filenamePfx: 'grapesjs_templateCode',
           root: {
-            css: {
-              'style.css': ed => ed.getCss(),
-            },        
-            'index.html': ed =>
-              `<!doctype html>
-            <html lang="en">
-              <head>
-                <meta charset="utf-8">
-                <link rel="stylesheet" href="./css/style.css">
-                ${this.includeScripts(ed)}                
-              </head>
-              <body>${ed.getHtml()}</body>
-            <html>`,
+            custom: {
+              'custom.component.css' : ed => ed.getCss(),
+              'custom.component.html': ed => ed.getHtml(),
+              'custom.component.ts': ed =>
+                `import { Component } from '@angular/core';
+                import { Renderer2, OnInit, Inject } from '@angular/core';
+                import { DOCUMENT } from '@angular/platform-browser';
+                @Component({
+                  selector: 'custom-component',
+                  templateUrl: './custom.component.html',
+                  styleUrls: ['./custom.component.css']
+                })
+                export class CustomComponent implements OnInit {
+                    constructor(private _renderer2: Renderer2, @Inject(DOCUMENT) private _document) {
+                }
+                public ngOnInit() {
+                      ${this.includeCustomScripts(ed)}
+                  }
+                }
+                
+                `
+            }
+            // css: {
+            //   'style.css': ed => ed.getCss(),
+            // },        
+            // 'index.html': ed =>
+            //   `<!doctype html>
+            // <html lang="en">
+            //   <head>
+            //     <meta charset="utf-8">
+            //     <link rel="stylesheet" href="./css/style.css">
+            //     ${this.includeScripts(ed)}                
+            //   </head>
+            //   <body>${ed.getHtml()}</body>
+            // <html>`,
           }
         }
       },
@@ -311,7 +333,7 @@ export class HomeComponent implements OnInit {
       //   document.body.appendChild(script);
       // },
         attributes: { 'id': 'gridTable', type:'grid','heading':'Parent grid title','subtitle':"Parent grid subtitle",'api':'https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db','fontFamily':'Arial, Helvetica, sans-serif','theme':'blue' },
-        content: '<core-grid-datatypes apirequest={"handlerURL":"https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db"} tableconfig=\'{"id":"materialsummary","theme":"blue","title":{"text":"Parent grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}\'></core-grid-datatypes>',
+        content: '<core-grid-datatypes apirequest=\'{"handlerURL":"https://my-json-server.typicode.com/VelmuruganHCL/gridDemo/db"}\' tableconfig=\'{"id":"materialsummary","theme":"blue","title":{"text":"Parent grid title","enabled":true,"align":"center","verticalAlign":"","style":{"fontSize":"18px","fontStyle":"normal","fontFamily":"Arial,Helvetica,sans-serif"}},"subtitle":{"text":"Parent grid subtitle","align":"center","verticalAlign":"","style":{"fontSize":"14px","fontFamily":"Arial, Helvetica, sans-serif"}}}\'></core-grid-datatypes>',
         type:'grid',
       }
     });
@@ -386,13 +408,6 @@ export class HomeComponent implements OnInit {
       el: '.panel__basic-actions',
       buttons: [
         {
-          id: 'export',
-          className: 'btn-open-export',
-          //label: 'Export',
-          command: 'export-template',
-          context: 'export-template' // For grouping context of buttons from the same panel
-        },
-        {
           id:'trait',
           className: 'fa fa-cog',
           command: 'open-tm',
@@ -406,17 +421,54 @@ export class HomeComponent implements OnInit {
           command: 'open-blocks',
           togglable: 1,
           attributes: { title: 'Open Blocks' }
+        },
+        {
+          id: 'export',
+          className: 'btn-open-export',
+          //label: 'Export',
+          command: 'export-template',
+          context: 'export-template' // For grouping context of buttons from the same panel
         }
      
       ]
     });
  
   }
+
+    includeCustomScripts(ed){
+      console.log(ed);
+      var temContent = ed.getHtml();
+      var scriptToInclude = `let s = this._renderer2.createElement('script');
+      s.type = 'text/javascript';
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.7/custom-elements-es5-adapter.js';
+      this._renderer2.appendChild(this._document.body, s);`;
+      if (temContent.indexOf('core-grid-datatypes') > -1) {
+        let arr=["https://hclo365-my.sharepoint.com/personal/velmurugan_su_hcl_com/Documents/main.js?e=4%3a680718ec2de5496ca6ac9df8bccf13ae&at=9"]
+        for(let i=0;i<arr.length;i++){
+          scriptToInclude +=`let s${i} = this._renderer2.createElement('script');
+          s${i}.type = 'text/javascript';
+          s${i}.src = '${arr[i]}';
+          this._renderer2.appendChild(this._document.body, s${i});`
+        }
+      }
+      if (temContent.indexOf('core-chart-datatypes') > -1) {
+        let arr=["https://cdnjs.cloudflare.com/ajax/libs/highcharts/6.2.0/highcharts.js","https://hclo365-my.sharepoint.com/:u:/r/personal/velmurugan_su_hcl_com/Documents/main_chart.js?csf=1&e=txgNtu"]
+        for(let i=0;i<arr.length;i++){
+          scriptToInclude +=`let c${i} = this._renderer2.createElement('script');
+          c${i}.type = 'text/javascript';
+          c${i}.src = '${arr[i]}';
+          this._renderer2.appendChild(this._document.body, c${i});`
+        }
+      }
+        return scriptToInclude;
+    }
+
     includeScripts(ed) {
       var temContent = ed.getHtml();
       var scriptToInclude = "";
       if (temContent.indexOf('gridTable') > -1) {
         scriptToInclude = scriptToInclude + '<script src="https://hclo365-my.sharepoint.com/personal/velmurugan_su_hcl_com/Documents/main.js?e=4%3a680718ec2de5496ca6ac9df8bccf13ae&at=9"/>\n' + '<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.7/custom-elements-es5-adapter.js"/>\n';
+        
       }
       if (temContent.indexOf('testComp') > -1) {
         scriptToInclude = scriptToInclude + '<script src="test component"/>\n';
@@ -466,7 +518,6 @@ export class HomeComponent implements OnInit {
       }
     }
     addTraitType(component,domComps){
-      console.log("add trait types");
       let self=this;
       let dType = domComps.getType('default');
       let dModel = dType.model;
