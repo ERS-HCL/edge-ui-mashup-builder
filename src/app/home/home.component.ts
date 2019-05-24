@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit {
           root: {
             custom: {
               'custom.component.css' : ed => ed.getCss(),
-              'custom.component.html': ed => ed.getHtml(),
+              'custom.component.html': ed => ed.getWrapper().view.$el[0].innerHTML.replace(/"/g,"'").replace(/&quot;/g, "\""),
               'custom.component.ts': ed =>
                 `import { Component } from '@angular/core';
                 import { Renderer2, OnInit, Inject } from '@angular/core';
@@ -436,7 +436,6 @@ export class HomeComponent implements OnInit {
   }
 
     includeCustomScripts(ed){
-      console.log(ed);
       var temContent = ed.getHtml();
       var scriptToInclude = `let s = this._renderer2.createElement('script');
       s.type = 'text/javascript';
